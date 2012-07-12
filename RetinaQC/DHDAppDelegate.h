@@ -11,5 +11,6 @@
 @interface DHDAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSView *qcCompositionLayerView;
 
 @end

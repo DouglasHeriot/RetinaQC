@@ -7,12 +7,16 @@
 //
 
 #import "DHDAppDelegate.h"
+#import <Quartz/Quartz.h>
+#import <QuartzCore/QuartzCore.h>
 
 @implementation DHDAppDelegate
+@synthesize qcCompositionLayerView;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	// Insert code here to initialize your application
+	self.qcCompositionLayerView.layer = [QCCompositionLayer compositionLayerWithFile:[[NSBundle mainBundle] pathForResource:@"Display" ofType:@"qtz"]];
+	self.qcCompositionLayerView.wantsLayer = YES;
 }
 
 @end
